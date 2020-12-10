@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: min-content;
+}
+
+h1 {
+    margin: 0;
+    font-size: inherit;
+}
+
+span {
+    padding: 2px 5px;
+    border-radius: 5px;
+    background-color: #ddd;
+    font-family: monospace;
+}
+
+#warning {
+    padding-top: 10px;
+    white-space: normal;
+    font-style: italic;
+}
+#warning:not(.show) {
+    display: none;
+}
+
+div {
+    display: flex;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr:not(:first-child) > td {
+    padding: 2px 0;
+    border-top: 1px solid #aaa;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 7px;
+}
+.switch input {
+    display: none;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #bbb;
+    border-radius: 34px;
+}
+input.init + .slider {
+    transition: 0.3s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: inherit;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #ff3e3e;
+}
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
